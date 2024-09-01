@@ -1,16 +1,20 @@
+// Viviana Quiñonez Lugones
+// TP 1 , Comisión 5
+// Enlace al video: https://youtu.be/dvqfTsY0sxs?si=pmDAbseBGzvnA5i_
+
 let img, BASE, alpha, desplazamiento, zoom;
 let lila, amarillo, verde, rojo, azul, naranja;
-
+ 
 function preload () {
  img = loadImage('data/crucestp3.jpg');  
 }
-
 
 function cuadrado( x, y, h, r, g, b, a) {
   noStroke();
   fill(r, g, b, a);
   rect(x, y, h, h);
 }
+
 
 function getColor ( i, j , desp, mc) {
   return mc[j % 15][(i + desp) % 10];
@@ -51,6 +55,7 @@ function setup() {
   [lila, lila, lila, verde, azul, amarillo, amarillo, amarillo, rojo, naranja],
 ];
 }
+
 
 function draw() {
   background(255); // Asegurar que el fondo se limpie cada vez que se dibuje
