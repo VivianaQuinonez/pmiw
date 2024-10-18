@@ -1,16 +1,20 @@
-
-
-
 function preload() {
-  // Precargo las imágenes de fondo.
-  for (let i = 0; i < backgroundNames.length; i++) {
-     backgroundImages[i] = loadImage(backgroundNames[i]); 
-  }
+  // Precargo los textos
+  misTextos = loadStrings('data/TextosTombRaider.txt');
   
-  for (let i = 0; i < objetosAEncontrar.length; i++) {
-     elementosImages[i] = loadImage(objetosAEncontrar[i]); 
-  }
+  // Sonidos
+  soundFormats('mp3');
+  sonidoClickBoton = loadSound('data/ui-click-43196.mp3');
+  sonidoPuerta = loadSound('data/door-97917.mp3');
+  SonidoPuertaMaravillosa = loadSound('data/fairy-dust-shimmer-1-175611.mp3');
+  
+  // Precargo las imágenes de fondo. (Ver pestaña utils)
+  precargarImagenesFondo()
+  
+  // Precargo las imágenes de los objetos a encontrar (Ver pestaña utils)
+  precargarObjetosAEncontrar()
 
+  // Imagen del logo de la primer pantalla
   logoImage = loadImage('data/02_logo.png');
 }
 
@@ -22,73 +26,16 @@ function setup() {
 }
 
 
-function draw() {
-  let tiempoActual = millis();
-  image(backgroundImages[escena], 0, 0);
-  
-  // Si han pasado más de 2 segundos
-  if (tiempoActual - tiempoInicio > 2000 && !mostrar) {
-    mostrar = true;
-  }
-  
-  switch (escena) {
-    case 0:
-      escena0();
-      break;      
-    case 1:
-      escena1();
-      break;     
-    case 2: 
-      escena2();    
-      break;      
-    case 3: 
-      escena3();    
-      break; 
-    case 4:
-      escena4();
-      break;
-    case 5: 
-      escena5();
-      break;
-    case 6: 
-      escena6();
-      break;
-    case 7:
-      escena7();
-      break;
-    case 8:
-      escena8();
-      break;
-    case 9:
-      escena9();
-      break;
-    case 10:
-      escena10;
-      break;
-    case 11:
-      escena11();
-      break;
-    case 12:
-      escena12();
-      break;
-    case 13:
-      escena13();
-      break;
-    case 14:
-      escena14();
-      break;
-    case 15:
-      escena15();
-      break;
-      
-    default:
-      break;    
-    
-  }
+function draw() {  
+  dispararEscenas(escena);
 }
 
 
 // Detecta si el botón fue presionado
 function mousePressed() {
+  
+}
 
+function mouseClicked() {
+   detectarAcciones(); 
 }
