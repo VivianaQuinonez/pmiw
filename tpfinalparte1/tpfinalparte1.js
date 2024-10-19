@@ -1,5 +1,11 @@
+//comisión 5
+// Sabrina Quiñonez, Viviana Quiñonez Lugones 
+// ENLACE YOUTUBE: https://www.youtube.com/watch?v=_11F8D2yF5M&ab_channel=vivianaqui%C3%B1onez
+
+
 function preload() {
-  // Precargo los textos
+  
+  // Precarga los textos
   misTextos = loadStrings('data/TextosTombRaider.txt');
   
   // Sonidos
@@ -8,11 +14,9 @@ function preload() {
   sonidoPuerta = loadSound('data/door-97917.mp3');
   SonidoPuertaMaravillosa = loadSound('data/fairy-dust-shimmer-1-175611.mp3');
   
-  // Precargo las imágenes de fondo. (Ver pestaña utils)
+  // Precarga de las imágenes de fondo. (Ver pestaña utils)
   precargarImagenesFondo()
   
-  // Precargo las imágenes de los objetos a encontrar (Ver pestaña utils)
-  precargarObjetosAEncontrar()
 
   // Imagen del logo de la primer pantalla
   logoImage = loadImage('data/02_logo.png');
@@ -30,11 +34,6 @@ function draw() {
   dispararEscenas(escena);
 }
 
-
-// Detecta si el botón fue presionado
-function mousePressed() {
-  
-}
 
 function mouseClicked() {
    detectarAcciones(); 

@@ -20,23 +20,5 @@ let backgroundNames = [
   'data/PANTALLA16.png',          // pos 16
   'data/PANTALLA17.png',          // pos 17
   
-  ]; 
+]; 
   
-let backgroundImages = [];
-  
-
-// Objetos a encontrar
-let elementosImages = [];
-let objetosAEncontrar = [
-  'data/objetoArcoYFlecha.png',
-  'data/objetoMachete.png',
-  'data/objetoPistola.png',
-  'data/objetoSoga.png',
-];
-
-// Variables para setear el logo
-let logoImage;
-let logoEscala = 0.5;
-let logoAlto, logoAncho;
-let logoTransparencia = 0;
-let velocidadFade = 2;
