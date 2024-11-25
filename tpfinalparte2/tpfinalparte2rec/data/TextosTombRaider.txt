@@ -1,0 +1,4 @@
+Lara Croft debe recolectar los talismanes que caen desde el cielo hacia el suelo. Puedes moverte con las flechas del teclado hacia la izquierda y hacia la derecha. Si recolectas 5 talismanes consecutivamente, ¡GANAS!; mientras que si no agarras dos talismanes seguidos y caen al piso ¡PIERDES!. Y debes apurarte ya que en cada vuelta los talismanes van cayendo más rápido. ¡MUCHA SUERTE!
+¡GANASTE!
+¡PERDISTE!
+Quiñonez Sabrina - Quiñonez Lugones Viviana
